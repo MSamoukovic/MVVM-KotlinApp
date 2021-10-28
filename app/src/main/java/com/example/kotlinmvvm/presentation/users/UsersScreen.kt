@@ -15,9 +15,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.kotlinmvvm.presentation.Screen
 import com.example.kotlinmvvm.presentation.users.components.UserItem
 
@@ -25,19 +22,24 @@ import com.example.kotlinmvvm.presentation.users.components.UserItem
 fun UsersScreen(
     navController: NavController,
     viewModel: UsersViewModel = hiltViewModel()
-){
+) {
     val state = viewModel.state.value
 
-    Box(modifier = Modifier.fillMaxSize()){
-        LazyColumn(modifier = Modifier.fillMaxSize()){
-            items(state.users){
-                user -> UserItem(user = user)
+    Box(modifier = Modifier.fillMaxSize()) {
+        LazyColumn(modifier = Modifier.fillMaxSize()) {
+            items(state.users) { user ->
+                UserItem(
+                    user = user,
+                    onItemClick = {
+                        navController.navigate(Screen.UserScreen.route + "/${user.id}")
+                    }
+                )
             }
         }
-        if(state.error.isNotBlank()){
+        if (state.error.isNotBlank()) {
             Text(text = state.error)
         }
-        if (state.isLoading){
+        if (state.isLoading) {
             CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
         }
     }

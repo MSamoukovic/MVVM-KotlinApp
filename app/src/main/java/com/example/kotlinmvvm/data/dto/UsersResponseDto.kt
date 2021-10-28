@@ -1,12 +1,9 @@
 package com.example.kotlinmvvm.data.dto
 
 
-import android.net.wifi.p2p.WifiP2pManager
-import android.util.Log
 import com.example.kotlinmvvm.domain.model.UserModel
-import com.example.kotlinmvvm.domain.model.UserResponseModel
+import com.example.kotlinmvvm.domain.model.UsersResponseModel
 import com.google.gson.annotations.SerializedName
-import okhttp3.internal.assertThreadDoesntHoldLock
 
 data class UsersResponseDto(
     @SerializedName("data")
@@ -16,15 +13,15 @@ data class UsersResponseDto(
     @SerializedName("per_page")
     val perPage: Int,
     @SerializedName("support")
-    val support: Support,
+    val supportDto: SupportDto,
     @SerializedName("total")
     val total: Int,
     @SerializedName("total_pages")
     val totalPages: Int
 )
 
-fun UsersResponseDto.toUserResponse() : UserResponseModel{
-    return UserResponseModel(
+fun UsersResponseDto.toUserResponse() : UsersResponseModel{
+    return UsersResponseModel(
         data = convertDtoToModel(data),
         totalPages = totalPages
     )

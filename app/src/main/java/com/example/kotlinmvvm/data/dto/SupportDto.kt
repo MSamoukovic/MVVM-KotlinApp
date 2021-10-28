@@ -3,7 +3,7 @@ package com.example.kotlinmvvm.data.dto
 
 import com.google.gson.annotations.SerializedName
 
-data class Support(
+data class SupportDto(
     @SerializedName("text")
     val text: String,
     @SerializedName("url")

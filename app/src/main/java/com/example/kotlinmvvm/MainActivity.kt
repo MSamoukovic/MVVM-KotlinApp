@@ -12,6 +12,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.kotlinmvvm.presentation.Screen
+import com.example.kotlinmvvm.presentation.user.UserScreen
 import com.example.kotlinmvvm.presentation.users.UsersScreen
 
 import com.example.kotlinmvvm.ui.theme.KotlinMVVMTheme
@@ -35,6 +36,11 @@ class MainActivity : ComponentActivity() {
                             route = Screen.UsersListScreen.route
                         ){
                             UsersScreen(navController)
+                        }
+                        composable(
+                            route = Screen.UserScreen.route + "/{userID}"
+                        ){
+                            UserScreen()
                         }
                     }
                 }
