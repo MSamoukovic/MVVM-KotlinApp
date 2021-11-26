@@ -2,8 +2,9 @@
   <library name="Gradle: com.google.accompanist:accompanist-flowlayout:0.17.0@aar">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/541b6b6720b6a35552bf7d1a642915f1/transformed/jetified-accompanist-flowlayout-0.17.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4ebd881c443762db9d4b1869d744e388/transformed/jetified-accompanist-flowlayout-0.17.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4ebd881c443762db9d4b1869d744e388/transformed/jetified-accompanist-flowlayout-0.17.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/06fbee33d2ea23b08884468fef7f92c1/transformed/jetified-accompanist-flowlayout-0.17.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4ebd881c443762db9d4b1869d744e388/transformed/jetified-accompanist-flowlayout-0.17.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4ebd881c443762db9d4b1869d744e388/transformed/jetified-accompanist-flowlayout-0.17.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
